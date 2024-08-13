@@ -1,0 +1,13 @@
+Package: baerhunter
+Title: baerhunter RShiny
+Version: 0.0.0.9000
+Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
+Description: An application for 'baerhunter' to detect putative non-coding RNAs from bacterial transcriptomic data
+License: What license is it under?
+Imports: 
+    config (>= 0.3.2),
+    golem (>= 0.4.1),
+    shiny (>= 1.8.1.1)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1

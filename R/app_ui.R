@@ -10,7 +10,35 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("baerhunter")
+      shinyjs::useShinyjs(),
+      theme = shinythemes::shinytheme("flatly"),
+      navbarPage(
+        "Baerhunter",
+        # First tab: Annotation of ncRNA
+        tabPanel("Annotation of ncRNA",
+                 sidebarLayout(
+                   sidebarPanel(
+                     # Dynamic UI for preprocessing inputs, to be rendered by the server
+                     uiOutput("input_ui")
+                   ),
+                   mainPanel(
+                     # Dynamic UI for preprocessing outputs, to be rendered by the server
+                     uiOutput("output_ui")
+                   )
+                 )
+        ),
+        # Second tab: Preprocessing of BAM files
+        tabPanel("Preprocessing of BAM files",
+                 sidebarLayout(
+                   sidebarPanel(
+                     uiOutput("preprocessing_input_ui")  # For input elements
+                   ),
+                   mainPanel(
+                     uiOutput("preprocessing_output_ui")  # For output elements
+                   )
+                 )
+        )
+      )
     )
   )
 }

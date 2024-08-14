@@ -20,13 +20,34 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "name_of_module2", with_test = TRUE) # Name of the module
+golem::add_module(name = "annot_sum", with_test = FALSE) # Name of the module
+golem::add_module(name = "preprocessing", with_test = FALSE) # Name of the module
+golem::add_module(name = "jbrows", with_test = FALSE)
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
-golem::add_fct("helpers", with_test = TRUE)
+golem::add_fct("bam_processing", with_test = FALSE)
+golem::add_fct("summary", with_test = FALSE)
+golem::add_fct("serve_data2", with_test = FALSE)
+golem::add_fct("plot_cvg", with_test = FALSE)
 golem::add_utils("helpers", with_test = TRUE)
+
+usethis::use_package("shinythemes")
+usethis::use_package("Rsamtools")
+usethis::use_package("GenomicAlignments")
+usethis::use_package("GenomicRanges")
+usethis::use_package("rtracklayer")
+usethis::use_package("stringr")
+usethis::use_package("dplyr")
+usethis::use_package("PupillometryR")
+usethis::use_package("shinyjs")
+usethis::use_package("DT")
+usethis::use_package("JBrowseR")
+usethis::use_package("ggplot2")
+usethis::use_package("cowplot")
+usethis::use_package("assertthat")
+usethis::use_package("Rsubread")
+
 
 ## External resources
 ## Creates .js and .css files at inst/app/www

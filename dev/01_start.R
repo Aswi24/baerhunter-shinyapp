@@ -21,7 +21,7 @@
 golem::fill_desc(
   pkg_name = "baerhunter", # The Name of the package containing the App
   pkg_title = "baerhunter RShiny", # The Title of the package containing the App
-  pkg_description = "An application for baerhunter to detect non-coding RNAs from bacterial transcriptomic data", # The Description of the package containing the App
+  pkg_description = "An application for 'baerhunter' to detect putative non-coding RNAs from bacterial transcriptomic data", # The Description of the package containing the App
   author_first_name = "AUTHOR_FIRST", # Your First Name
   author_last_name = "AUTHOR_LAST", # Your Last Name
   author_email = "AUTHOR@MAIL.COM", # Your Email
@@ -50,7 +50,7 @@ usethis::use_news_md(open = FALSE)
 ## Use git ----
 usethis::use_git()
 
-## Init Testing Infrastructure ----
+yes## Init Testing Infrastructure ----
 ## Create a template for tests
 golem::use_recommended_tests()
 
